@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+/* Start Framework */
+.green{
+    color: #009688;
+    font-weight: bold;
+}
+.blue{
+    color: #2196f3;
+    font-weight: bold;
+}
+.red{
+    color: #e91e63;
+    font-weight: bold;
+}
+.yes{
+    color: #058000;
+    font-weight: bold;
+}
+.no{
+    color: #ff213d;
+    font-weight: bold;
+
+}
+h3{
+    background-color: #009688;
+    color: #fff;
+    font-weight: bold;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+hr{
+    margin: 25px 0;
+    border: 1px solid #f1f1f1;
+}
+/* End Framework */
+/* Start Name Section */
+.parent{
+    width: 90%;
+    margin-top: 40px;
+}
+.name{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "level name name name name";
+    background-color: #fff;
+    
+}
+
+.name .level{
+    grid-area: level;
+    border-right: 1px solid #d5d5d5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.name .level img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #dddddd;
+    margin-bottom: 10px;
+}
+
+.name .level .level8{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+   
+}
+.name .level .bar{
+    width: 90%;
+    text-align: center;
+    height: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-image: linear-gradient(
+        to right,
+        #009688 80%,
+        #f1f1f1 80%,
+        #f1f1f1 100%
+    );
+}
+.name .level .points-level{
+    text-align: center;
+}
+.name .name-section{
+    grid-area: name;
+    margin: 15px;
+    position: relative;
+}
+h2{
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.name .name-section .days{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+/* End Name Section */
+/* Start Points Section */
+
+.points{
+    background-color: #ffffff;
+    padding: 15px;
+}
+.points div{
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.points div:last-child{
+    border: none;
+}
+/* End Points Section */
+/* Start Trophies Section */
+
+.trophies{
+    background-color: #ffffff;
+    padding: 15px;
+}
+.trophies div img{
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+
+}
+.trophies div img:nth-child(6),
+.trophies div img:nth-child(10),
+.trophies div img:nth-child(13),
+.trophies div img:nth-child(15),
+.trophies div img:nth-child(17),
+.trophies div img:nth-child(20){
+    opacity: 0.3;
+}
+/* End Trophies Section */
+/* Start Ladder-News Section */
+
+.ladder{
+    background-color: #ffffff;
+    padding: 15px;
+    padding-bottom: 25px;
+}
+/* End Ladder-News Section */
+/* Start Powers Section */
+
+.powers{
+    background-color: #ffffff;   
+    padding: 15px;
+}
+
+.powers div{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    width: 100%;
+}
+.powers div div{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 12px;
+}
+/* End Powers Section */
+/* Start Media Queries */
+
+
+/* Mobile */
+@media (min-width:100px) and (max-width: 767px){
+    .name{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "level" "name";
+        height: 700px;
+    }
+    .trophies div{
+    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .trophies div img{
+        margin: 5px;
+    
+    }
+    
+}
+ 
+/* Small Screenes */ 
+@media (min-width: 768px) and (max-width:991px) {
+    .name{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "level name name";
+    }
+    .trophies div{
+    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .trophies div img{
+        margin: 10px;
+    
+    }
+     
+}
+/* Medium Screens */ 
+@media (min-width: 992px) and (max-width:1199px){
+    .trophies div{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .trophies div img{
+        margin: 5px;
+    
+    }
+}
+ 
+/* large Screenes */ 
+@media (min-width: 1200px){
+    
+}
